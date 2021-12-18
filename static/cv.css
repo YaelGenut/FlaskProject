@@ -35,7 +35,7 @@ body{
     width: 25vh;
     /* vh is from the display of the screen . not of the container */
     height: 20vh;
-    background-color: rgb(184, 112, 100);
+    background-color: rgb(120, 150, 100);
     /* padding:30px;
     margin: 10px; */
 }
@@ -43,7 +43,7 @@ body{
     grid-area: left;
     width: 100%;
     height: 100vh;
-    background-color: rgb(161, 228, 100);
+    background-color: rgb(120, 150, 50);
     padding:30px;
     margin: 10px;
 }
@@ -51,7 +51,7 @@ body{
     grid-area: main;
     width: 100%;
     height: 100vh;
-    background-color: rgb(170, 40, 136);
+    background-color: rgb(255, 255, 255);
     padding:30px;
     margin: 10px;
 }

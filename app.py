@@ -1,35 +1,30 @@
-from flask import Flask, redirect, url_for
+from flask import Flask, redirect, url_for, render_template
 
 app = Flask(__name__)
+app.secret_key = "super secret key"
 
-# -------------- routes ---------------
 
+@app.route('/main')
 @app.route('/')
-
-# ------------- pages functions ------------
-
-# home page
-@app.route('/home_page')
-def home_page_func():
-        return 'Welcome to the Home Page!'
-
-# products page
-@app.route('/products')
-def products_func():
-    return 'Welcome to products page'
+def cv():
+    return render_template('cv.html')
 
 
-# ------------- redirect functions ------------
+@app.route('/assignment8')
+def assignment8():
 
-# redirect about page
+    return render_template('assignment8.html', hobbies=['Sport', 'Piano', 'Guitar', 'Puzzles'],
+                           )
+
+
 @app.route('/about')
-def about_func():
-    return redirect('/products')
+def about():
+    return render_template('about.html')
 
-# redirect about page
-@app.route('/catalogs')
-def catalog_func():
-    return redirect(url_for('products_func'))
+
+@app.route('/cat')
+def maple():
+    return render_template('cat.html')
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
