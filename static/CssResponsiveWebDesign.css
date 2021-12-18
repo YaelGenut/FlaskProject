@@ -1,0 +1,66 @@
+.body {
+    background-color grey;
+}
+
+.GridContainer {
+    height 50vh;
+    display: grid;
+    grid-template-areas:
+    'header header header header header'
+    'menu main main right right'
+    'menu main main right right'
+    'menu footer footer footer footer'
+    ;
+}
+
+.item1 {
+    grid-area: header; /* name that we invented, we can decide whatever we want*/
+    width: 100%;
+    background-color: pink;
+    height: 20vh;
+}
+
+.item2 {
+    grid-area: menu;
+    width: 100%;
+    background-color: orange;
+    height: 30vh;
+}
+
+.item3 {
+    grid-area: main;
+    width: 100%;
+    background-color: yellow;
+    height: 15vh;
+}
+
+.item4 {
+    grid-area: right;
+    width: 100%;
+    background-color: red;
+    height: 15vh;
+}
+
+.item5 {
+    grid-area: footer;
+    width: 100%;
+    background-color: purple;
+    height: 20vh;
+}
+
+@media only screen and (max-width: 600px) {
+    .GridContainer {
+        height 90vh;
+        display: grid;
+        grid-template-areas:
+        'header'
+        'menu'
+        'main'
+        'right'
+        'footer'
+        ;
+      }
+}
+
+
+

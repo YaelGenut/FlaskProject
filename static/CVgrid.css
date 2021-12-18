@@ -1,0 +1,68 @@
+body {
+    background-color grey;
+}
+
+#GridContainer {
+    display: grid;
+    grid-template-areas:
+    'button header header'
+    'left main main'
+    'left main main'
+    ;
+}
+
+#item1 {
+    grid-area: header; /* name that we invented, we can decide whatever we want*/
+    width: 100%;
+    background-color: pink;
+    height: 33vh;
+}
+
+#item2 {
+    grid-area: left;
+    width: 100%;
+    background-color: orange;
+    height: 66vh;
+}
+
+#item3 {
+    grid-area: main;
+    width: 100%;
+    background-color: yellow;
+    height: 66vh;
+}
+
+#button {
+    font-size: 50px;
+    height: 200px;
+    background-color: blue;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-iteration-count: 5;
+}
+
+@keyframes blink {
+    0% {background-color: blue; border-radius:0% }
+    30% {background-color: white; border-radius:50% }
+    60% {background-color: blue;border-radius:100% }
+    60% {background-color:white;border-radius:50% }
+    100% {background-color: blue;border-radius:0% }
+   }
+
+}
+
+@media only screen and (max-width: 600px) {
+    body{
+        background-color: blue;
+    }
+    #GridContainer {
+    display: grid;
+    grid-template-areas:
+   'button'
+   'header'
+    'left'
+    'main'
+    ;
+}
+
+

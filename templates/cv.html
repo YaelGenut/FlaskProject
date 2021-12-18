@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/cv.css">
+    <script src="../static/cv.js"></script>
+    <title>Yael CV</title>
+</head>
+<body>
+    <div id="GridContainer">
+        <div id="item1"><h1>Yael Genut</h1>
+        <h3>Product Manager, Microsoft</h3>
+        <h3>Industrial Engenering Stuedent, 4th year</h3>
+    </div>
+        <div id="item2"><h1>Contact Me</h1>
+            <!-- action- to where in the server to send the form (after the submit)-->
+            <form action="" id="form1">
+                <lable  for="Name">Full Name </lable> <br>
+                <!-- id connect to the for field -->
+                <input type="text" id="Name" name="Name" minlength="6" maxlength="20"><br> <br> 
+                <lable for="">Phone number </lable><br>
+                <input type="number"><br> <br> 
+                <lable for=""> Email Address </address></lable><br>
+                <input type="email"><br> <br>
+                <lable for=""> Passward </lable><br>
+                <input type="passward" id="Pass" minlength="6" maxlength="16"><br> <br>
+                <lable for="">More Info</lable><br>
+                <textarea name="" id="" cols="" rows=""></textarea><br> <br>
+                <input type="submit" id="form1" onclick="inputValidity()"><br>
+                <!-- <p id="errorName">Min length 6, max length 20</p> -->
+            </form>
+            <p id="errorName"></p>
+            <p id="errorPass"></p>
+        </div>
+        <div id="item3">
+            <h1>About Me</h1>
+            <h2>Military Service</h2>
+            <h3>2013-2016 | Intelligence analyst</h3>
+            </p>
+            <h2>Work Experience</h2>
+            <h3>2020-current | Product manager at Microsoft</h3>
+            <p>
+            </p>
+
+        </div>
+    </div>
+</body>
+</html>
