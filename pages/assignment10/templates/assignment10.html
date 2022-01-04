@@ -1,0 +1,50 @@
+{% extends 'BaseFile.html' %}
+
+{% block title %} Assigment 10
+{% endblock %}
+
+{% block content %}
+{% set page_name='assigment10' %}
+    <h1>Users</h1>
+     {% for message in get_flashed_messages() %}
+        <h3 style="color: red" >{{ message }}</h3>
+    {% endfor %}
+    <h2>Insert Form:</h2>
+    <form action="/insert_user" method="post">
+        <input type="text" name="name" placeholder="Name">
+        <input type="email" name="email" placeholder="Email">
+        <input type="text" name="gender" placeholder="Gender">
+        <input type="submit" value="Insert">
+    </form>
+    <hr>
+
+     <h2>Update Form:</h2>
+    <form action="/update_user" method="post">
+        <h3>User to update:</h3>
+        <input type="text" name="id" placeholder="id">
+        <h3>value to update:</h3>
+        <input type="text" name="name" placeholder="Name">
+        <input type="email" name="email" placeholder="Email">
+        <input type="text" name="gender" placeholder="Gender">
+        <input type="submit" value="Update">
+    </form>
+    <hr>
+
+     <h2> Delete Form:</h2>
+    <form action="/delete_user" method="post">
+        <h3>User to delete:</h3>
+        <input type="text" name="id" placeholder="id">
+        <input type="submit" value="Delete">
+
+    </form>
+    <hr>
+
+    <h2>User List:</h2>
+
+        {% for user in users %}
+            <li>
+            <b>   {{ user.id }}: </b>  {{ user.name }} , {{ user.email }} , {{ user.gender }}
+            </li>
+        {% endfor %}
+
+{% endblock %}
