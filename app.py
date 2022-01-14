@@ -95,7 +95,7 @@ def external_front_func():
      return render_template('assignment11/external.html', id=user_id)
 
 @app.route('/external_backend')
-def req_backend_func():
+def get_user_data():
     if request.args['user_id'] != '':
         id = request.args['user_id']
         res = request.get('https://reqres.in/api/users/%s' % id)
